@@ -13,7 +13,7 @@ public class LightBoard
     for(int i = 0; i < lights.length; i++){
         for(int j = 0; j < lights[0].length; j++){
             if(Math.random() <= 0.4){
-                lights[r][c] = true;
+                lights[i][j] = true;
             }
         }
     }
@@ -28,16 +28,16 @@ public class LightBoard
     int onInC = 0;
     for(int r = 0; r < lights.length; r++){
         if(lights[r][col] == true){
-            onInColumn++;
+            onInC++;
         }
     }
     if(lights[row][col] == true){
-        if(onInColumn % 2 == 0){
+        if(onInC % 2 == 0){
             return false;
         }
     }
     else{
-        if(onInColumn % 3 == 0){
+        if(onInC % 3 == 0){
             return true;
         }
     }
